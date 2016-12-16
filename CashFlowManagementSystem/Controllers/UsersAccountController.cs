@@ -41,7 +41,7 @@ namespace CashFlowManagementSystem.Controllers
         [HttpPost]
         public ActionResult Login(UsersAccount user)
         {
-            using (UserDbContext context = new UserDbContext())
+            using (CashFlowDbContext context = new CashFlowDbContext())
             {
                 var usr = context.UsersAccount.Single(u => u.UserName == user.UserName && u.PassWord == user.PassWord);
                 if (usr != null)

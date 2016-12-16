@@ -7,6 +7,9 @@ namespace CashFlowManagementSystem.Models.Repositories
 {
     public class UsersAccountRepository:Repository<UsersAccount>
     {
-       public 
+       public UsersAccount GetID(UsersAccount usr)
+        {
+            return DbSet.Single();
+        }
     }
 }

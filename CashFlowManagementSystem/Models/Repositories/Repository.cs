@@ -26,5 +26,6 @@ namespace CashFlowManagementSystem.Models.Repositories
         {
             Context.SaveChanges();
         }
+
     }
 }
