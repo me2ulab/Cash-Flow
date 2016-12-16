@@ -9,5 +9,7 @@ namespace CashFlowManagementSystem.Models
     public class CashFlowDbContext:DbContext
     {
         public DbSet<UsersAccount> UsersAccount { get; set; }
+        public DbSet<Expenses> Expenses { get; set; }
+        public DbSet<Income> Incomes { get; set; }
     }
 }

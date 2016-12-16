@@ -37,5 +37,7 @@ namespace CashFlowManagementSystem.Models
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
         public int UserCategory { get; set; }
+        public virtual List<Expenses> Expenses { get; set; }
+        public virtual List<Income> Incomes { get; set; }
     }
 }
