@@ -12,12 +12,14 @@ namespace CashFlowManagementSystem.Controllers
     {
         // GET: UsersAccount
         UsersAccountRepository user = new UsersAccountRepository();
+        CashFlowDbContext context = new CashFlowDbContext();
         public ActionResult Index()
         {
             return View(user.GetAllUsers());
         }
         public ActionResult Register()
         {
+            ViewBag.CateID = new SelectList(context.UsersCategory, "CateID", "Name");
             return View();
         }
         [HttpPost]
@@ -48,6 +50,7 @@ namespace CashFlowManagementSystem.Controllers
                 {
                     Session["UserId"] = user.UserID.ToString();
                     Session["UserName"] = user.UserName.ToString();
+                    Session["CateID"] = user.CateID.ToString();
                     return RedirectToAction("LoggedIn");
                 }
                 else
@@ -61,6 +64,7 @@ namespace CashFlowManagementSystem.Controllers
         {
             if (Session["UserId"] != null)
             {
+
                 return View();
             }
             else

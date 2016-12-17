@@ -162,11 +162,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CashFlowDbContext.cs" />
     <Compile Include="Models\Expenses.cs" />
     <Compile Include="Models\Income.cs" />
+    <Compile Include="Models\Repositories\ExpensesRepository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
     <Compile Include="Models\Repositories\UsersAccountRepository.cs" />
+    <Compile Include="Models\UserCategory.cs" />
     <Compile Include="Models\UsersAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -210,11 +213,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\UsersAccount\Index.cshtml" />
+    <Content Include="Views\UsersAccount\Register.cshtml" />
+    <Content Include="Views\UsersAccount\Login.cshtml" />
+    <Content Include="Views\UsersAccount\LoggedIn.cshtml" />
+    <Content Include="Views\Expenses\NewExpenses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Expenses\" />
-    <Folder Include="Views\UsersAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

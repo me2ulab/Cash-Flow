@@ -10,6 +10,15 @@ namespace CashFlowManagementSystem.Models.Repositories
     {
         private CashFlowDbContext Context = null;
         protected DbSet<T> DbSet { set; get; }
+        public Repository()
+        {
+            Context = new CashFlowDbContext();
+            DbSet = Context.Set<T>();
+        }
+        public Repository(CashFlowDbContext context)
+        {
+            this.Context = context;
+        }
         public List<T> GetAllUsers()
         {
             return DbSet.ToList();

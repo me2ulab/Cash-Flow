@@ -11,5 +11,6 @@ namespace CashFlowManagementSystem.Models
         public DbSet<UsersAccount> UsersAccount { get; set; }
         public DbSet<Expenses> Expenses { get; set; }
         public DbSet<Income> Incomes { get; set; }
+        public DbSet<UserCategory> UsersCategory { get; set; }
     }
 }
