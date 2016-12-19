@@ -5,10 +5,10 @@
 
 @if (Session["UserId"] != null)
 {
-    <h4>Hello @Session["UserName"].ToString()</h4>
-    if(Session["CateID"]==1)
+    @ViewBag.cateid
+    if (ViewBag.cateid == 1)
     {
-
+        <h4>Hello @Session["UserName"].ToString() Employer</h4>
     }
 }
 

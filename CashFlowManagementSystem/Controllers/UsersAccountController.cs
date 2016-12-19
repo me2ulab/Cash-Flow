@@ -50,7 +50,8 @@ namespace CashFlowManagementSystem.Controllers
                 {
                     Session["UserId"] = user.UserID.ToString();
                     Session["UserName"] = user.UserName.ToString();
-                    Session["CateID"] = user.CateID.ToString();
+                    Session["CateID"] = user.CateID;
+                    
                     return RedirectToAction("LoggedIn");
                 }
                 else
@@ -64,7 +65,7 @@ namespace CashFlowManagementSystem.Controllers
         {
             if (Session["UserId"] != null)
             {
-
+                ViewBag.catid = Session["CateID"];
                 return View();
             }
             else
@@ -72,5 +73,7 @@ namespace CashFlowManagementSystem.Controllers
                 return RedirectToAction("Login");
             }
         }
+
+       
     }
 }

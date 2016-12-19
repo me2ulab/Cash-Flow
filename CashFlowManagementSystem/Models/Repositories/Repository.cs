@@ -35,6 +35,14 @@ namespace CashFlowManagementSystem.Models.Repositories
         {
             Context.SaveChanges();
         }
+        public void Update(T entity)
+        {
+            Context.Entry<T>(entity).State = EntityState.Modified;
+        }
+        public void Delete(int id)
+        {
+            DbSet.Remove(DbSet.Find(id));
+        }
 
     }
 }

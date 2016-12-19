@@ -11,5 +11,9 @@ namespace CashFlowManagementSystem.Models.Repositories
         {
             return DbSet.Single();
         }
+        public UsersAccount GetCategory(UsersAccount usr)
+        {
+            return DbSet.Find(usr.CateID);
+        }
     }
 }
